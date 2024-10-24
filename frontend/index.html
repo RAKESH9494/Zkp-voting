@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Dapp</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="header">
+        <div>Welcome to zkp Dapp</div>
+    </div>
+
+    <br/>
+    <div class="vote-cast-container">
+        <div class="form">
+            <form id="voteForm">
+                <label>Enter Your Age</label>
+                <input type="number" placeholder="Your age..." id="age" required/> <br/>
+                <label>Select Contestant</label>
+                <select id="contestant"  required>
+                    <option value="1">Contestant A</option>
+                    <option value="2">Contestant B</option>
+                    <option value="3">Contestant C</option>
+                    <option value="4">Contestant D</option>
+                </select>
+                <br/><br/>
+                <button type="submit" id="castVote">Cast Vote</button>
+            </form>
+        </div>
+    </div>
+    <h2 class="live-results-heading">Live Results</h2>
+
+    <div class="live-results">
+        
+        <div class="contesent">
+            <span>Contestant A</span><br/>  
+            <img src="./assets/Con-A.jpg" alt="Contestant A" />
+            <span id="votesOfContestent-1"></span>
+        </div> 
+        <div class="contesent">
+            <span>Contestant B</span><br/>  
+            <img src="./assets/Con-B.jpg" alt="Contestant B" />
+            <span id="votesOfContestent-2"></span>
+        </div>
+        <div class="contesent">
+            <span>Contestant C</span><br/>  
+            <img src="./assets/Con-C.jpeg" alt="Contestant C" />
+            <span id="votesOfContestent-3"></span>
+        </div>
+        <div class="contesent">
+            <span>Contestant D</span><br/>  
+            <img src="./assets/Con-D.jpg" alt="Contestant D" />
+            <span id="votesOfContestent-4"></span>
+        </div>
+    </div>
+
+        <!-- Modal for transaction progress -->
+        <div id="transactionModal" class="modal" style="display:none;">
+            <div class="modal-content">
+                <span>Please wait, transaction is being processed...</span>
+            </div>
+        </div>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.1/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/snarkjs@0.7.5/build/snarkjs.min.js"></script>
+    <script src="./connectWallet.js"></script>
+</body>
+</html>
