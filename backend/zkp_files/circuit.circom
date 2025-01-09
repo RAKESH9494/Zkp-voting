@@ -2,6 +2,7 @@ pragma circom 2.1.6;
 
 include "../node_modules/circomlib/circuits/poseidon.circom"; // Poseidon hash function
 include "../node_modules/circomlib/circuits/comparators.circom"; // Include IsZero comparator
+include "../node_modules/circomlib/circuits/bitify.circom"; // Num2Bits
 
 template voting () {
     signal input ToWhomVote;
@@ -10,6 +11,8 @@ template voting () {
     signal output EligibleToVote;
     signal output Vote;
 
+    component ToWhomVoteBits = Num2Bits(8);
+    ToWhomVoteBits.in <== ToWhomVote;
 
     component AgeAbove18 = GreaterEqThan(8);
     AgeAbove18.in[0] <== Age;
