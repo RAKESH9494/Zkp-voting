@@ -17,8 +17,6 @@ body {
     text-align: center;
     margin: 20px 0;
     height: 260px;
-    /* display: flex; */
-    /* justify-content: space-between; */
 }
 
 
@@ -29,7 +27,6 @@ body {
     height: 180px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    /* border: 2px solid black; */
     background-color: #f9f9f9;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -52,7 +49,6 @@ body {
     background-color: #4CAF50;
     color: white;
     border: none;
-    /* margin-top: -20px; */
     border-radius: 5px;
     cursor: pointer;
 }
@@ -84,8 +80,6 @@ h1 {
 }
 
 .contesent img {
-    /* width: 100%;
-    height: auto; */
     height: 400px;
     width: 300px;
     border-radius: 10px;
