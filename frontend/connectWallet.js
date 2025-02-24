@@ -1,14 +1,10 @@
-// const ethers = require("ethers")
-// const ethers = require("ethers")
 const contractAddress = "0xcB14D82298Bf3c63d1216743b94FCA3281245D9d"; // Replace with your contract address
 let contractABI;
 const loadABI = async () => {
   try {
     const response = await fetch("../backend/artifacts/contracts/votingContract.sol/votingContract.json");
     const abiFile = await response.json();
-    // console.log(response)
     contractABI = abiFile.abi; // Make sure you access the ABI field in the JSON
-    // console.log("ABI Loaded:", contractABI);
   } catch (error) {
     console.error("Error loading ABI:", error);
   }
